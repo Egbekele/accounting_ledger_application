@@ -3,3 +3,5 @@ date|time|description|vendor|amount
 2023-04-15|11:15:00|Invoice 1001 paid|Joe|1500.00
 2026-11-06|02:36:37|weekly pay|sephora|400.0
 2026-11-06|02:37:08|credit|becu|-300.0
+2026-11-06|05:12:28|weekly pay|sephora|300.0
+2026-11-06|05:13:05|rent|house|-1000.0

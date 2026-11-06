@@ -3,6 +3,7 @@ package pluralsight;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class ReportsScreen {
@@ -18,7 +19,7 @@ public class ReportsScreen {
             System.out.println("3) Year To Date");
             System.out.println("4) Previous Year");
             System.out.println("5) Search by Vendor");
-            //    System.out.println("6) Custom Search");
+            System.out.println("6) Custom Search");
             System.out.println("0) Back");
             System.out.print("Pick from the following lists: ");
             String pick = scanner.nextLine().trim();
@@ -39,11 +40,14 @@ public class ReportsScreen {
                 case "5":
                     searchByVendor(scanner);
                     break;
+                case "6":
+                    customSearch(scanner);
+                    break;
                 case "0":
                     reports = false;
                     break;
                 default:
-                    System.out.println("Try again and make sure to pick from the list");
+                    System.out.println("Try again and make sure to pick from the list!");
             }
         }
     }
@@ -147,8 +151,64 @@ public class ReportsScreen {
         }
     }
 
+    // 6) Custom search
+    public static void customSearch(Scanner scanner) {
+        System.out.println("\n==========Custom Search==========");
+        System.out.println("Pick from the list to view!");
+
+        System.out.print("Start Date (yyyy-MM-dd): ");
+        String startDate = scanner.nextLine().trim();
+        System.out.print("End Date: ");
+        String endDate = scanner.nextLine().trim();
+        System.out.print("Description: ");
+        String descInfo = scanner.nextLine().trim();
+        System.out.print("Vendor: ");
+        String vendor = scanner.nextLine().trim();
+        System.out.print("Amount: ");
+        String amount = scanner.nextLine().trim();
+
+        ArrayList<Transaction> transactions = TransactionFile.readTransactions();
+        LedgerScreen.header();
+
+        // from newest to older transaction
+        for (int i = transactions.size() - 1; i >= 0; i--) {
+            Transaction transaction = transactions.get(i);
+
+
+            // Start Date:
+            if (startDate.length() > 0 && dateToNum(transaction.getDate()) < dateToNum(LocalDate.parse(startDate))) {
+                continue;
+            }
+            // End date:
+            if (endDate.length() > 0 && dateToNum(transaction.getDate()) > dateToNum(LocalDate.parse(endDate))) {
+                continue;
+            }
+            // Description:
+            if (descInfo.length() > 0 && !transaction.getDescription().equalsIgnoreCase(descInfo)) {
+                continue;
+            }
+
+            // Vendor:
+            if (vendor.length() > 0 && !transaction.getVendor().equalsIgnoreCase(vendor)) {
+                continue;
+            }
+
+            // Amount:
+
+            if (amount.length() > 0 && transaction.getAmount() != Double.parseDouble(amount)) {
+                continue;
+            }
+
+            // it passed every filter
+            LedgerScreen.printTransaction(transaction);
+
+        }
+    }
+
+    // turn a date into a number
+    public static int dateToNum(LocalDate date) {
+        return date.getYear() * 10000 + date.getMonthValue() * 100 + date.getDayOfMonth();
+    }
+
 }
-
-
-
 

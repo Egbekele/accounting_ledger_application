@@ -9,6 +9,12 @@ public class AccountingLedgerApplication {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // Welcome banner
+        System.out.println("=======================================================");
+        System.out.println("        WELCOME TO [Accounting Ledger Application]");
+        System.out.println("   Track every dollar in and every dollar out");
+        System.out.println("========================================================");
+
 
         // ask the user to choose from the menu
         boolean run = true;
