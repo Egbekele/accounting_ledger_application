@@ -1,4 +1,4 @@
-Accounting Ledger Application
+#Accounting Ledger Application
 
 
 This is my first Capstone for Year Up United in the Software track.
@@ -7,8 +7,8 @@ This program is designed to track your finances. It logs your deposits and payme
 
 
 
-Features
-Home Screen
+**Features**
+**Home Screen**
 
 D) Add Deposit - prompts the user for the deposit information and saves it to the CSV file
 
@@ -20,7 +20,7 @@ X) Exit - exits the application
 
 
 
-Ledger Screen
+**Ledger Screen**
 All entries are shown newest first.
 
 A) All - displays all entries
@@ -35,7 +35,7 @@ H) Home - goes back to the Home screen
 
 
 
-Reports Screen
+**Reports Screen**
 1) Month To Date - transactions from this month
 2) Previous Month - transactions from last month
 3) Year To Date - transactions from this year
@@ -45,7 +45,7 @@ Reports Screen
 
 
 
-Format of Transactions
+**Format of Transactions**
 
 Each transaction is saved as one line in transactions.csv:
 
@@ -59,7 +59,7 @@ date|time|description|vendor|amount
 
 
 
-Code Class Structure
+**Code Class Structure**
 * AccountingLedgerApplication.java -> where the main method is; shows the Home screen
 * DepositAndPayment.java -> where the user adds a deposit or payment, and the amount is checked 
 * TransactionFile.java -> writes transactions to and reads them from transactions.csv
@@ -70,7 +70,7 @@ Code Class Structure
 
 
 
-How to Run ⭐️
+**How to Run ⭐️**
 1. Clone this repository:
     git clone https://github.com/Egbekele/accounting_ledger_application
 2. Open the project in IntelliJ IDEA.
@@ -79,7 +79,7 @@ How to Run ⭐️
 5. Follow the on-screen menus.
 
 
-Proud Code of Mine 💪🏽👏🏽
+**Proud Code of Mine 💪🏽👏🏽**
 
 The findAmount method in the DepositAndPayment class is designed to keep asking the user until they type a valid amount. If they type letters or other characters, the code doesn’t crash. Instead, they get a message with an example of what’s expected and another chance to try again. The same thing happens if they type 0 or a negative number. They can keep trying as many times as they need until it’s correct.
 
