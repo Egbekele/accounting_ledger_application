@@ -17,11 +17,16 @@ X) Exit - exits the application
 
 
 Ledger Screen
-All entries show the newest first.
+All entries are shown newest first.
+
 A) All - displays all entries
+
 D) Deposits - displays only deposits (money coming in)
+
 P) Payments - displays only payments (money going out)
+
 R) Reports - opens the Reports screen
+
 H) Home - goes back to the Home screen
 
 
@@ -35,17 +40,24 @@ Reports Screen
 
 
 Format of Transactions
+
 Each transaction is saved as one line in transactions.csv:
+
 date|time|description|vendor|amount
+
 2023-04-15|10:13:25|ergonomic keyboard|Amazon|-89.50
+
 2023-04-15|11:15:00|Invoice 1001 paid|Joe|1500.00
+
 
 🌟Positive amounts are deposits and negative amounts are payments. 
 
 
 Code Class Structure
 * AccountingLedgerApplication.java -> where the main method is; shows the Home screen
+  
 * DepositAndPayment.java -> where the user adds a deposit or payment, and the amount is checked
+  
 * TransactionFile.java -> writes transactions to and reads them from transactions.csv
 * Transaction.java -> temporarily holds one transaction's data so it can be displayed
 * LedgerScreen.java -> shows the menu to view your transaction history
