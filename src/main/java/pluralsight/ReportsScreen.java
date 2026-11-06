@@ -53,7 +53,7 @@ public class ReportsScreen {
         LocalDate rightNow = LocalDate.now();
 
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
-        LedgerScreen.printHeader();
+        LedgerScreen.header();
 
 
         for (int i = transactions.size() - 1; i >= 0; i--) {
@@ -80,7 +80,7 @@ public class ReportsScreen {
         }
 
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
-        LedgerScreen.printHeader();
+        LedgerScreen.header();
 
         for (int i = transactions.size() - 1; i >= 0; i--) {
             Transaction transaction = transactions.get(i);
@@ -98,7 +98,7 @@ public class ReportsScreen {
         LocalDate rightNow = LocalDate.now();
 
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
-        LedgerScreen.printHeader();
+        LedgerScreen.header();
 
         for (int i = transactions.size() - 1; i >= 0; i--) {
             Transaction transaction = transactions.get(i);
@@ -116,7 +116,7 @@ public class ReportsScreen {
         int lastYear = LocalDate.now().getYear() - 1;
 
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
-        LedgerScreen.printHeader();
+        LedgerScreen.header();
 
         for (int i = transactions.size() - 1; i >= 0; i--) {
             Transaction transaction = transactions.get(i);
@@ -136,7 +136,7 @@ public class ReportsScreen {
         String vendor = scanner.nextLine().trim();
 
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
-        LedgerScreen.printHeader();
+        LedgerScreen.header();
 
         for (int i = transactions.size() - 1; i >= 0; i--) {
             Transaction transaction = transactions.get(i);

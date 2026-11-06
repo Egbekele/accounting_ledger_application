@@ -44,8 +44,8 @@ public class LedgerScreen {
         }
     }
 
-    // Column
-    public static void printHeader() {
+    // Column & Header
+    public static void header() {
         System.out.println("DATE | TIME | DESCRIPTION | VENDOR | AMOUNT");
         System.out.println("----------------------------------------------------");
     }
@@ -61,7 +61,7 @@ public class LedgerScreen {
     // A) display all transaction
     public static void displayAll(){
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
-        printHeader();
+        header();
         for (int i = transactions.size() - 1; i >= 0; i--){
             printTransaction(transactions.get(i));
         }
@@ -70,7 +70,7 @@ public class LedgerScreen {
     // D) display only deposits
     public static void displayDeposits (){
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
-        printHeader();
+        header();
         for (int i = transactions.size() - 1; i >= 0; i--){
             Transaction transaction = transactions.get(i);
             if(transaction.getAmount() > 0){
@@ -81,7 +81,7 @@ public class LedgerScreen {
     // P) display payments (negative entries)
     public static void displayPayment (){
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
-        printHeader();
+        header();
         for (int i = transactions.size() - 1; i >= 0; i--){
             Transaction transaction = transactions.get(i);
             if(transaction.getAmount() < 0){
