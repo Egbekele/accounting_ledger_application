@@ -1,9 +1,6 @@
 package pluralsight;
 import java.util.Scanner;
 
-
-
-
 public class AccountingLedgerApplication {
 
     public static void main(String[] args) {
