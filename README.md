@@ -1,5 +1,6 @@
 Accounting Ledger Application
 
+
 This is my first Capstone for Year Up United in the Software track.
 
 This program is designed to track your finances. It logs your deposits and payments and lets you view your history. Each transaction is organized by date, time, description, vendor, and amount. It also has a cool feature that lets you search your transactions by vendor. Everything you log is saved in a file called transactions.csv.
