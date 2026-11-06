@@ -1,0 +1,45 @@
+package pluralsight;
+
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Transaction {
+
+    // parts for each part of a CSV line
+    private LocalDate date;
+    private LocalTime time;
+    private String description;
+    private String vendor;
+    private double amount;
+
+    // Constructor
+    public Transaction (LocalDate date, LocalTime time, String description, String vendor, double amount){
+        this.date = date;
+        this.time = time;
+        this.description = description;
+        this.vendor = vendor;
+        this.amount = amount;
+    }
+    // Getters for each
+    public LocalDate getDate(){
+        return date;
+    }
+
+    public LocalTime getTime(){
+        return time;
+    }
+
+    public String getDescription (){
+        return description;
+    }
+
+    public String getVendor() {
+        return vendor;
+    }
+
+    public double getAmount(){
+        return amount;
+    }
+
+}

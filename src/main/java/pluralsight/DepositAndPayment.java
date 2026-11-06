@@ -23,7 +23,7 @@ public class DepositAndPayment {
     // P) Make Payment (Debit) - prompt the user for the debit information and save it to the CSV file
     public static void makePayment (Scanner scanner){
         System.out.println("==========Payment Center==========");
-        System.out.println("Payment Information: ");
+        System.out.print("Payment Information: ");
         String paymentInfo = scanner.nextLine().trim();
         System.out.print("Vendor: ");
         String vendor = scanner.nextLine().trim();
@@ -36,7 +36,7 @@ public class DepositAndPayment {
 
 
 
-    // asking until we get a vailed number
+    // asking until we get the number we want
     public static double findAmount(Scanner scanner){
         while(true){
             System.out.print("Amount: ");
@@ -45,7 +45,7 @@ public class DepositAndPayment {
                 if(amount > 0){
                     return amount;
                 }
-                System.out.println("Amount must be grater than 0.");
+                System.out.println("Amount must be greater than 0.");
             } catch(Exception e){
                 System.out.println("Please enter a number, like the following examples would be 30.00");
             }

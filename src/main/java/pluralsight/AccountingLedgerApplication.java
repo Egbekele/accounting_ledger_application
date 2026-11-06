@@ -13,13 +13,13 @@ public class AccountingLedgerApplication {
         // ask the user to choose from the menu
         boolean run = true;
         while (run) {
-            System.out.println("==========Home Screen==========");
+            System.out.println("\n==========Home Screen==========");
             System.out.println("D) Add Deposit");
             System.out.println("P) Make Payment (Debit)");
             System.out.println("L) Ledger");
             System.out.println("X) Exit");
 
-            System.out.print("Pick from one from the following option: ");
+            System.out.print("Pick one from the following option: ");
             String pick = scanner.nextLine().trim().toUpperCase();
 
             switch (pick){
@@ -30,10 +30,10 @@ public class AccountingLedgerApplication {
                     DepositAndPayment.makePayment(scanner);
                     break;
                 case"L":
-                    ledger();
+                    LedgerScreen.ledger(scanner);
                     break;
                 case "X":
-                    System.out.print("Left the Screen!");
+                    System.out.println("Left the Screen!");
                     run = false;
                     break;
                 default:
