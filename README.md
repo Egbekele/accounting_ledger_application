@@ -6,6 +6,7 @@ This program is designed to track your finances. It logs your deposits and payme
 
 Features
 Home Screen
+
 D) Add Deposit - prompts the user for the deposit information and saves it to the CSV file
 P) Make Payment (Debit) - prompts the user for the payment information and saves it to the CSV file
 L) Ledger - displays the Ledger screen
