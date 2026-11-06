@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class TransactionFile {
 
     // transactions.csv
-    // Writing to the transactions file
+    // Writing to the transactions file (deposit and payment)
     public static void saveTansactions (String description, String vendor, double amount){
         LocalDateTime rightNow = LocalDateTime.now();  // the exact time now
         DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // format for day
@@ -31,7 +31,8 @@ public class TransactionFile {
         }
     }
 
-    // Reading the lines of trandsctions.cvs
+
+    // Reading the lines of trandsctions.cvs (ledger and report)
     public static ArrayList<Transaction> readTransactions(){
         ArrayList<Transaction> transactions = new ArrayList<Transaction>();
 
@@ -45,6 +46,7 @@ public class TransactionFile {
                     continue;
                 }
 
+                // the order it should read
                 String [] parts = input.split("\\|");
                 LocalDate date = LocalDate.parse(parts[0]);
                 LocalTime time = LocalTime.parse(parts[1]);

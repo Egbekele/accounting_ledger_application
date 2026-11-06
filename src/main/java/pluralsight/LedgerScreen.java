@@ -50,7 +50,7 @@ public class LedgerScreen {
         System.out.println("----------------------------------------------------");
     }
 
-    // Transaction in one row
+    // Transaction in one row / format
     public static void printTransaction (Transaction transaction){
         DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HH:mm:ss");
         System.out.printf("%s | %s | %s | %s | $%.2f\n", transaction.getDate(), transaction.getTime().format(timeFormat),
@@ -62,6 +62,7 @@ public class LedgerScreen {
     public static void displayAll(){
         ArrayList<Transaction> transactions = TransactionFile.readTransactions();
         header();
+        // display the newest transaction to the oldest
         for (int i = transactions.size() - 1; i >= 0; i--){
             printTransaction(transactions.get(i));
         }

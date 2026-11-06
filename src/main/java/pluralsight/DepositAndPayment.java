@@ -36,7 +36,7 @@ public class DepositAndPayment {
 
 
 
-    // asking until we get the number we want
+    // asking until we get the number we want and if it's a number
     public static double findAmount(Scanner scanner){
         while(true){
             System.out.print("Amount: ");

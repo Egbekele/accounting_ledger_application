@@ -4,6 +4,7 @@ package pluralsight;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+// saves the inputs temp so they can be accessed by ledger and report inorder to be read
 public class Transaction {
 
     // parts for each part of a CSV line
