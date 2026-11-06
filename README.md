@@ -1,4 +1,4 @@
-#Accounting Ledger Application
+# Accounting Ledger Application
 
 
 This is my first Capstone for Year Up United in the Software track.
